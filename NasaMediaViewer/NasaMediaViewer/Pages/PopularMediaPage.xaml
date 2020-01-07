@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<local:MediaPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:models="clr-namespace:NasaMediaViewer.Shared.Models;assembly=NasaMediaViewer.Shared"
+                 xmlns:local="clr-namespace:NasaMediaViewer;assembly=NasaMediaViewer"
+                 x:Class="NasaMediaViewer.Pages.PopularMediaPage"
+                 x:Name="Page">
+    <StackLayout>
+        <!-- Media list view -->
+        <ListView HasUnevenRows="true"
+                  SeparatorVisibility="None"
+                  IsPullToRefreshEnabled="true"
+                  IsRefreshing="{Binding Loader.IsRefreshing, Source={x:Reference Page}, Mode=OneWay}"
+                  RefreshCommand="{Binding Loader.RefreshAsyncCommand, Source={x:Reference Page}}"
+                  ItemsSource="{Binding Loader.Loaded, Source={x:Reference Page}}"
+                  ItemAppearing="MediaListView_OnItemAppearing">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:NasaMediaEntry+Item">
+                    <ViewCell>
+                        <Frame Margin="16" Padding="0" CornerRadius="16">
+                            <StackLayout>
+                                <ContentView Padding="16, 12, 16, 8">
+                                    <Label Text="{Binding Title}"
+                                           FontFamily="{StaticResource RegularFont}" />
+                                </ContentView>
+                                <Image x:Name="Thumbnail"
+                                       Aspect="AspectFill"
+                                       VerticalOptions="FillAndExpand"
+                                       HeightRequest="{Binding Width, Source={x:Reference Thumbnail}}"
+                                       Source="{Binding Thumbnail}" />
+                                <ContentView Padding="14, 6, 14, 10">
+                                    <Label Text="{Binding Summary}"
+                                           FontFamily="{StaticResource RegularFont}" />
+                                </ContentView>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <!-- Activity indicator -->
+            <ListView.Footer>
+                <ContentView Padding="8">
+                    <ActivityIndicator
+                        IsVisible="{Binding Loader.IsLoading, Source={x:Reference Page}}"
+                        IsRunning="{Binding Loader.IsLoading, Source={x:Reference Page}}" />
+                </ContentView>
+            </ListView.Footer>
+        </ListView>
+    </StackLayout>
+</local:MediaPage>

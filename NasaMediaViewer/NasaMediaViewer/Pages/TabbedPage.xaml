@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:pages="clr-namespace:NasaMediaViewer.Pages;assembly=NasaMediaViewer"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            x:Class="NasaMediaViewer.Pages.TabbedPage">
+    <NavigationPage Title="Home" IconImageSource="round_home_24">
+        <x:Arguments>
+            <pages:RecentMediaPage NavigationPage.HasNavigationBar="false"/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Trending" IconImageSource="round_trending_up_24">
+        <x:Arguments>
+            <pages:PopularMediaPage NavigationPage.HasNavigationBar="false"/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Favorites" IconImageSource="round_favorite_24">
+        <x:Arguments>
+            <pages:FavoritesPage NavigationPage.HasNavigationBar="false"/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Search" IconImageSource="round_search_24">
+        <x:Arguments>
+            <pages:SearchMediaPage NavigationPage.HasNavigationBar="false" />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

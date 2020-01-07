@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <LangVersion>8</LangVersion>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+      <PackageReference Include="System.Text.Json" Version="4.6.0" />
+      <PackageReference Include="Xamarin.Forms" Version="4.2.0.848062" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\NasaMediaViewer.Shared\NasaMediaViewer.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Pages\RecentMediaPage.xaml.cs">
+        <DependentUpon>RecentMediaPage.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="Pages\PopularMediaPage.xaml.cs">
+        <DependentUpon>PopularMediaPage.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+</Project>
