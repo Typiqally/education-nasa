@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Foundation;
-using NasaMediaViewer.Pages;
-using UIKit;
-
-namespace NasaMediaViewer.iOS
+﻿namespace NasaMediaViewer.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 

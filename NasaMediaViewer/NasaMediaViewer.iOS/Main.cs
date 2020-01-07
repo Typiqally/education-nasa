@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Foundation;
-using UIKit;
-
-namespace NasaMediaViewer.iOS
+﻿namespace NasaMediaViewer.iOS
 {
     public class Application
     {

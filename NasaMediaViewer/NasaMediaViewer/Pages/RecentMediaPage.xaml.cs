@@ -1,7 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using NasaMediaViewer.Shared;
+﻿using NasaMediaViewer.Shared;
 using NasaMediaViewer.Shared.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

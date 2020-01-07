@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
-using System.Net.Http;
 using System.Runtime.CompilerServices;
-using System.Text.Json;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
-using NasaMediaViewer.Shared.Builders;
 using NasaMediaViewer.Shared.Extensions;
 using NasaMediaViewer.Shared.Models;
 using Xamarin.Forms;

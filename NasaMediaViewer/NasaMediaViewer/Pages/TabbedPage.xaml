@@ -8,17 +8,17 @@
             x:Class="NasaMediaViewer.Pages.TabbedPage">
     <NavigationPage Title="Home" IconImageSource="round_home_24">
         <x:Arguments>
-            <pages:RecentMediaPage NavigationPage.HasNavigationBar="false"/>
+            <pages:RecentMediaPage NavigationPage.HasNavigationBar="false" />
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Trending" IconImageSource="round_trending_up_24">
         <x:Arguments>
-            <pages:PopularMediaPage NavigationPage.HasNavigationBar="false"/>
+            <pages:PopularMediaPage NavigationPage.HasNavigationBar="false" />
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Favorites" IconImageSource="round_favorite_24">
         <x:Arguments>
-            <pages:FavoritesPage NavigationPage.HasNavigationBar="false"/>
+            <pages:FavoritesPage NavigationPage.HasNavigationBar="false" />
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Search" IconImageSource="round_search_24">

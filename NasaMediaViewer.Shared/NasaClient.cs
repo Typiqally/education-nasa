@@ -22,7 +22,7 @@ namespace NasaMediaViewer.Shared
 
         public static NasaClient Default() => new NasaClient(new Uri(NasaConstants.ApiBaseUrl));
 
-                public async Task<NasaCollection<NasaMediaEntry>> RequestSortedMediaAsync(OrderType order)
+        public async Task<NasaCollection<NasaMediaEntry>> RequestSortedMediaAsync(OrderType order)
         {
             return await RequestMediaAsync($"asset/?orderby={order.ToString().ToLower()}");
         }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using NasaMediaViewer.Shared;
 using NasaMediaViewer.Shared.Models;
 using Xamarin.Forms;
