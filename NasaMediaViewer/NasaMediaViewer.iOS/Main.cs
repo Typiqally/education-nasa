@@ -1,4 +1,6 @@
-﻿namespace NasaMediaViewer.iOS
+﻿using UIKit;
+
+namespace NasaMediaViewer.iOS
 {
     public class Application
     {
