@@ -1,5 +1,5 @@
 # Nasa
-NasaMediaViewer application using the Nasa media API built in Xamarin Forms
+NasaMediaViewer application using the NASA Image and Video Library API. NasaMediaViewer is built entirely in Xamarin Forms. It was originally created for participation in a school project.
 
 ## Features
 
@@ -11,3 +11,7 @@ NasaMediaViewer application using the Nasa media API built in Xamarin Forms
 ## API's
 
 - NASA Image and Video Library https://images-api.nasa.gov
+
+## License
+
+NasaMediaViewer is licensed under the terms of GPL v3. See [LICENSE](LICENSE) for details.
