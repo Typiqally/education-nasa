@@ -9,14 +9,14 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - name: Setup Nuget.exe
-      uses: warrenbuckley/Setup-Nuget@v1
+    - name: Setup NuGet.exe for use with actions
+      uses: NuGet/setup-nuget@v1.0.5
 
     - name: Nuget Restore
       run: nuget restore
 
-    - name: Setup MSBuild.exe
-      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1
 
     - name: MSBuild
       run: msbuild
